@@ -7,7 +7,7 @@ namespace ProblematicProblem
 {
     class Program
     {
-        public static Random rng;        
+        public static Random rng = new Random();        
         public static bool cont = true;
         static List<string> activities = new List<string>() { "Movies", "Paintball", "Bowling", "Lazer Tag", "LAN Party", "Hiking", "Axe Throwing", "Wine Tasting" };
 
@@ -167,11 +167,11 @@ namespace ProblematicProblem
                         Console.WriteLine();
                         //cont = bool.Parse(Console.ReadLine());
                         answer = Console.ReadLine().ToLower();
-                        if (answer == "keep")
+                        if (answer == "redo")
                         {
                             cont = true;
                         }
-                        else if (answer == "redo")
+                        else if (answer == "keep")
                         {
                             cont = false;
                         }
@@ -185,19 +185,8 @@ namespace ProblematicProblem
 			}
         }
 
-        public static void CheckForTrue(string response, string yes, string no, bool responseCheck)
-		{
-            if (response == yes)
-            {
-                responseCheck = true;
 
-            }
-            else if (response == no)
-            {
-                responseCheck = false;
-
-            }
-        }
+        
     }
 }
 
